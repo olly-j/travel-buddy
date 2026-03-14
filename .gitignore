@@ -1,0 +1,10 @@
+/.next
+/node_modules
+
+/.DS_Store
+
+/storybook-*.png
+/travel-buddy-*.png
+
+/media/*.jpg
+!/media/*-1600.jpg

@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Buddy | Easter Escape 2026</title>
+    <meta
+      name="description"
+      content="A coffee-table style one-page story of a two-night Easter escape through Rutland, Lincoln, and Leamington Spa."
+    />
+    <meta name="theme-color" content="#08111b" />
+    <meta property="og:title" content="Travel Buddy | Easter Escape 2026" />
+    <meta
+      property="og:description"
+      content="A coffee-table style one-page story of a two-night Easter escape through Rutland, Lincoln, and Leamington Spa."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./public/og-trip-snapshot.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Travel Buddy | Easter Escape 2026" />
+    <meta
+      name="twitter:description"
+      content="A coffee-table style one-page story of a two-night Easter escape through Rutland, Lincoln, and Leamington Spa."
+    />
+    <meta name="twitter:image" content="./public/og-trip-snapshot.svg" />
+    <link rel="icon" href="./app/icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #08111b;
+        --bg-soft: #0d1721;
+        --paper: #f6f1e8;
+        --surface: rgba(13, 22, 33, 0.62);
+        --surface-strong: rgba(9, 16, 24, 0.86);
+        --surface-border: rgba(243, 237, 228, 0.11);
+        --text: #f6f1e8;
+        --text-soft: rgba(246, 241, 232, 0.76);
+        --text-faint: rgba(246, 241, 232, 0.52);
+        --teal: #8dded6;
+        --gold: #ebcd91;
+        --blush: #edb6b1;
+        --shadow: 0 42px 100px rgba(0, 0, 0, 0.34);
+        --radius-xl: 34px;
+        --radius-lg: 24px;
+        --radius-md: 18px;
+        --max-width: 1220px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--text);
+        font-family: "Manrope", sans-serif;
+        background:
+          radial-gradient(circle at 16% 12%, rgba(141, 222, 214, 0.2), transparent 22%),
+          radial-gradient(circle at 82% 10%, rgba(235, 205, 145, 0.18), transparent 18%),
+          linear-gradient(180deg, #08111b 0%, #09131d 24%, #08111b 100%);
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      ::selection {
+        background: rgba(141, 222, 214, 0.28);
+      }
+
+      .page-shell {
+        position: relative;
+        overflow: clip;
+        padding: 24px clamp(18px, 2vw, 30px) 120px;
+      }
+
+      .page-shell::before,
+      .page-shell::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .page-shell::before {
+        background:
+          radial-gradient(circle at 20% 28%, rgba(84, 139, 143, 0.18), transparent 30%),
+          radial-gradient(circle at 78% 22%, rgba(235, 205, 145, 0.12), transparent 24%);
+        filter: blur(30px);
+      }
+
+      .page-shell::after {
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+        background-size: 120px 120px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0));
+        opacity: 0.3;
+      }
+
+      .site-header,
+      .section-shell,
+      .cover-shell {
+        position: relative;
+        z-index: 1;
+        width: min(100%, var(--max-width));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 12px 0 16px;
+      }
+
+      .brand-mark {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text-soft);
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .brand-mark__dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--gold), var(--teal));
+        box-shadow: 0 0 18px rgba(141, 222, 214, 0.5);
+      }
+
+      .site-nav {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        padding: 10px 14px;
+        border: 1px solid var(--surface-border);
+        border-radius: 999px;
+        background: rgba(8, 17, 27, 0.5);
+        backdrop-filter: blur(18px);
+      }
+
+      .site-nav a {
+        color: var(--text-faint);
+        font-size: 0.92rem;
+      }
+
+      .site-nav a:hover,
+      .site-nav a:focus-visible {
+        color: var(--text);
+      }
+
+      .cover-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 30px;
+        align-items: center;
+        min-height: calc(100vh - 110px);
+        padding: 42px 0 60px;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--teal);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+      }
+
+      h1 {
+        font-size: clamp(3.2rem, 7vw, 6.4rem);
+        line-height: 0.92;
+        text-wrap: balance;
+      }
+
+      h2 {
+        font-size: clamp(2.4rem, 4.8vw, 4.6rem);
+        line-height: 0.96;
+        text-wrap: balance;
+      }
+
+      h3 {
+        font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+        line-height: 1.02;
+      }
+
+      .lede,
+      .section-copy,
+      .chapter-copy,
+      .mini-copy,
+      .source-note {
+        color: var(--text-soft);
+        line-height: 1.78;
+      }
+
+      .lede {
+        max-width: 29rem;
+        margin: 24px 0 30px;
+        font-size: 1.12rem;
+      }
+
+      .cover-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 22px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease,
+          color 180ms ease;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-2px);
+      }
+
+      .button--primary {
+        background: linear-gradient(135deg, var(--gold), var(--teal));
+        color: #071018;
+        font-weight: 800;
+      }
+
+      .button--ghost {
+        border-color: rgba(243, 237, 228, 0.18);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .cover-note {
+        display: grid;
+        gap: 10px;
+        max-width: 32rem;
+      }
+
+      .cover-note__line {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--text-faint);
+        font-size: 0.96rem;
+      }
+
+      .cover-note__line::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--gold), var(--teal));
+        flex: 0 0 auto;
+      }
+
+      .glass-card {
+        border: 1px solid var(--surface-border);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.02)),
+          var(--surface);
+        backdrop-filter: blur(18px);
+        box-shadow: var(--shadow);
+      }
+
+      .cover-collage {
+        display: grid;
+        grid-template-columns: 1.1fr 0.88fr;
+        gap: 16px;
+        min-height: 720px;
+      }
+
+      .cover-card,
+      .photo-frame,
+      .chapter-card,
+      .quote-panel,
+      .bookend-panel,
+      .stay-panel,
+      .booking-panel,
+      .sources-panel {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius-xl);
+      }
+
+      .cover-card img,
+      .photo-frame img,
+      .chapter-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.04);
+        animation: drift 18s ease-in-out infinite alternate;
+      }
+
+      .cover-card--hero {
+        min-height: 720px;
+      }
+
+      .cover-card__overlay,
+      .chapter-image__overlay,
+      .quote-panel::before {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(6, 13, 20, 0.12), rgba(6, 13, 20, 0.82)),
+          linear-gradient(120deg, rgba(6, 13, 20, 0.45), transparent 40%);
+      }
+
+      .cover-card__content {
+        position: absolute;
+        inset: auto 24px 24px 24px;
+        z-index: 1;
+      }
+
+      .cover-card__content p,
+      .cover-card__content span,
+      .chapter-meta span,
+      .chapter-facts span,
+      .pill,
+      .source-group h3 {
+        color: var(--paper);
+        font-size: 0.9rem;
+      }
+
+      .cover-card__content h3 {
+        margin-top: 10px;
+        font-size: clamp(1.5rem, 2vw, 2.2rem);
+      }
+
+      .cover-side {
+        display: grid;
+        gap: 16px;
+      }
+
+      .cover-card--small {
+        min-height: 350px;
+      }
+
+      .section-shell {
+        padding-top: 92px;
+      }
+
+      .quote-panel {
+        min-height: 530px;
+        display: grid;
+        align-items: end;
+        padding: 38px;
+        background:
+          linear-gradient(180deg, rgba(8, 17, 27, 0.08), rgba(8, 17, 27, 0.22)),
+          url("./media/rutland-water-1600.jpg") center/cover no-repeat;
+      }
+
+      .quote-panel::before {
+        content: "";
+        position: absolute;
+      }
+
+      .quote-panel__inner {
+        position: relative;
+        z-index: 1;
+        max-width: 44rem;
+      }
+
+      .quote-panel blockquote {
+        margin: 0;
+        font-family: "Fraunces", serif;
+        font-size: clamp(2rem, 4vw, 4.1rem);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+      }
+
+      .quote-panel p {
+        margin: 20px 0 0;
+        max-width: 34rem;
+      }
+
+      .bookend-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .bookend-panel {
+        padding: 24px;
+      }
+
+      .bookend-panel h3 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+      }
+
+      .chapter-stack {
+        display: grid;
+        gap: 28px;
+      }
+
+      .chapter-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+        border: 1px solid var(--surface-border);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)),
+          rgba(11, 20, 30, 0.8);
+        box-shadow: var(--shadow);
+      }
+
+      .chapter-card:nth-child(even) {
+        grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+      }
+
+      .chapter-card:nth-child(even) .chapter-image {
+        order: 2;
+      }
+
+      .chapter-image {
+        position: relative;
+        min-height: 560px;
+      }
+
+      .chapter-image__overlay {
+        content: "";
+      }
+
+      .chapter-image__caption {
+        position: absolute;
+        inset: auto 24px 24px 24px;
+        z-index: 1;
+        color: var(--paper);
+        font-size: 0.92rem;
+      }
+
+      .chapter-copy-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 22px;
+        padding: 42px;
+      }
+
+      .chapter-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--teal);
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .chapter-kicker::before {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: rgba(141, 222, 214, 0.5);
+      }
+
+      .chapter-copy-wrap h3 {
+        font-size: clamp(2.2rem, 3vw, 3.4rem);
+        line-height: 0.96;
+      }
+
+      .chapter-copy {
+        font-size: 1.02rem;
+      }
+
+      .chapter-facts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 0 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(243, 237, 228, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .chapter-moments {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .chapter-moments li {
+        position: relative;
+        padding-left: 22px;
+        color: var(--text-soft);
+      }
+
+      .chapter-moments li::before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--gold), var(--teal));
+      }
+
+      .chapter-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(243, 237, 228, 0.08);
+      }
+
+      .chapter-link,
+      .source-links a,
+      .stay-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .chapter-link::after,
+      .source-links a::after,
+      .stay-links a::after {
+        content: "\2197";
+        color: var(--gold);
+      }
+
+      .chapter-link:hover,
+      .source-links a:hover,
+      .stay-links a:hover {
+        color: var(--gold);
+      }
+
+      .stay-panel,
+      .booking-panel,
+      .sources-panel {
+        padding: 28px;
+        border: 1px solid var(--surface-border);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.02)),
+          rgba(10, 18, 28, 0.76);
+        box-shadow: var(--shadow);
+      }
+
+      .split-panels {
+        display: grid;
+        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+        gap: 18px;
+      }
+
+      .stay-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+      }
+
+      .stay-card {
+        padding: 22px;
+        border-radius: var(--radius-lg);
+        border: 1px solid rgba(243, 237, 228, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .stay-card p,
+      .stay-card li,
+      .booking-list li,
+      .source-links a,
+      .source-note {
+        color: var(--text-soft);
+        line-height: 1.72;
+      }
+
+      .stay-links,
+      .source-grid,
+      .source-links {
+        display: grid;
+        gap: 10px;
+      }
+
+      .booking-list {
+        display: grid;
+        gap: 16px;
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .booking-list li {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .booking-list strong {
+        display: inline-grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid rgba(243, 237, 228, 0.12);
+        color: var(--gold);
+      }
+
+      .source-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 22px;
+      }
+
+      .source-group {
+        padding: 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(243, 237, 228, 0.08);
+      }
+
+      .source-group h3 {
+        margin-bottom: 12px;
+        font-size: 1.2rem;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid rgba(141, 222, 214, 0.88);
+        outline-offset: 3px;
+      }
+
+      @keyframes drift {
+        from {
+          transform: scale(1.04) translate3d(-1.5%, -1%, 0);
+        }
+        to {
+          transform: scale(1.09) translate3d(1.5%, 1%, 0);
+        }
+      }
+
+      @media (max-width: 1120px) {
+        .cover-shell,
+        .split-panels,
+        .chapter-card,
+        .chapter-card:nth-child(even),
+        .source-grid,
+        .bookend-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cover-collage {
+          min-height: auto;
+        }
+
+        .cover-card--hero,
+        .chapter-image {
+          min-height: 480px;
+        }
+
+        .chapter-card:nth-child(even) .chapter-image {
+          order: 0;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .page-shell {
+          padding-inline: 16px;
+          padding-bottom: 92px;
+        }
+
+        .site-header {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .site-nav {
+          justify-content: space-between;
+          overflow-x: auto;
+        }
+
+        .cover-collage,
+        .stay-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cover-card--hero,
+        .cover-card--small {
+          min-height: 320px;
+        }
+
+        .quote-panel {
+          min-height: 420px;
+          padding: 24px;
+        }
+
+        .chapter-copy-wrap,
+        .stay-panel,
+        .booking-panel,
+        .sources-panel {
+          padding: 24px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .cover-card img,
+        .photo-frame img,
+        .chapter-image img {
+          animation: none;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header">
+        <a class="brand-mark" href="#top">
+          <span class="brand-mark__dot"></span>
+          Travel Buddy
+        </a>
+        <nav class="site-nav" aria-label="Section navigation">
+          <a href="#story">Story</a>
+          <a href="#thursday">Thursday</a>
+          <a href="#friday">Friday</a>
+          <a href="#saturday">Saturday</a>
+          <a href="#book">Book</a>
+        </nav>
+      </header>
+
+      <section class="cover-shell" id="top">
+        <div class="reveal">
+          <p class="eyebrow">Easter Escape 2026</p>
+          <h1>The kind of two-night break that feels longer than it is.</h1>
+          <p class="lede">
+            The story here is not speed. It is the slow start with family, the first sight of
+            Rutland water and stone, the cathedral day that gives the trip its lift, and the
+            elegant soft landing back west through Leamington Spa.
+          </p>
+
+          <div class="cover-actions">
+            <a class="button button--primary" href="#story">Read the story</a>
+            <a class="button button--ghost" href="https://www.finchsarms.co.uk/" target="_blank" rel="noreferrer">
+              Open the stay
+            </a>
+          </div>
+
+          <div class="cover-note">
+            <div class="cover-note__line">Two nights away, with the family days kept clean and separate.</div>
+            <div class="cover-note__line">Rutland for atmosphere, Lincoln for grandeur, Leamington for the graceful return.</div>
+            <div class="cover-note__line">Moderate to premium, with the best version built around one beautiful day at a time.</div>
+          </div>
+        </div>
+
+        <div class="cover-collage reveal" aria-label="Trip imagery">
+          <article class="cover-card cover-card--hero glass-card">
+            <img
+              src="./media/rutland-water-1600.jpg"
+              alt="Rutland Water with open sky and shoreline"
+              width="1600"
+              height="1070"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <div class="cover-card__overlay"></div>
+            <div class="cover-card__content">
+              <p>Rutland</p>
+              <h3>The reset</h3>
+              <span>Water, stone villages, and the immediate feeling of being away.</span>
+            </div>
+          </article>
+
+          <div class="cover-side">
+            <article class="cover-card cover-card--small glass-card">
+              <img
+                src="./media/lincoln-cathedral-1600.jpg"
+                alt="Lincoln Cathedral rising above the historic quarter"
+                width="1200"
+                height="1600"
+                decoding="async"
+              />
+              <div class="cover-card__overlay"></div>
+              <div class="cover-card__content">
+                <p>Lincoln</p>
+                <h3>The heritage day</h3>
+                <span>Cathedral, castle, steep streets, and the sense of a proper occasion.</span>
+              </div>
+            </article>
+
+            <article class="cover-card cover-card--small glass-card">
+              <img
+                src="./media/leamington-spa-1600.jpg"
+                alt="Royal Leamington Spa street scene with elegant town centre buildings"
+                width="1600"
+                height="1109"
+                decoding="async"
+              />
+              <div class="cover-card__overlay"></div>
+              <div class="cover-card__content">
+                <p>Leamington Spa</p>
+                <h3>The soft return</h3>
+                <span>An elegant stop that makes the drive west feel useful and light.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell" id="story">
+        <div class="quote-panel glass-card reveal">
+          <div class="quote-panel__inner">
+            <p class="eyebrow">Trip rhythm</p>
+            <blockquote>
+              Family. Escape. Heritage. Soft return. Family again.
+            </blockquote>
+            <p>
+              That is why this plan works. It gives the couple’s break a clear beginning, a
+              memorable middle, and a calm ending, instead of turning the whole weekend into a
+              continuous logistics exercise.
+            </p>
+          </div>
+        </div>
+
+        <div class="bookend-grid reveal">
+          <article class="bookend-panel glass-card">
+            <p class="eyebrow">Wednesday 1 April</p>
+            <h3>The quiet beginning</h3>
+            <p class="mini-copy">
+              Drive to your parents, stay put, and let the trip begin without trying to prove
+              anything on day one.
+            </p>
+          </article>
+          <article class="bookend-panel glass-card">
+            <p class="eyebrow">Sunday 5 April</p>
+            <h3>The protected day</h3>
+            <p class="mini-copy">
+              Easter lunch stays untouched. No bonus detours, no squeezing in one last attraction.
+            </p>
+          </article>
+          <article class="bookend-panel glass-card">
+            <p class="eyebrow">Monday 6 April</p>
+            <h3>The sensible close</h3>
+            <p class="mini-copy">
+              Leave early for Woodford and let the final move home stay practical rather than dramatic.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="chapter-stack">
+          <article class="chapter-card reveal" id="thursday">
+            <div class="chapter-image">
+              <img
+                src="./media/rutland-water-1600.jpg"
+                alt="Rutland Water under a wide open spring sky"
+                width="1600"
+                height="1070"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="chapter-image__overlay"></div>
+              <div class="chapter-image__caption">Arrive to Rutland gently, not heroically.</div>
+            </div>
+            <div class="chapter-copy-wrap">
+              <div>
+                <div class="chapter-kicker">Chapter One | Thursday 2 April</div>
+                <h3>The break begins when the pace drops.</h3>
+              </div>
+
+              <p class="chapter-copy">
+                Leave your parents after breakfast or late morning and let the trip ease into
+                itself. Hambleton is the right first scene because it changes the mood instantly:
+                water, open sky, handsome stone, and the sense that the hard part is already over.
+              </p>
+
+              <div class="chapter-facts">
+                <span class="pill">Parents to Hambleton / Oakham</span>
+                <span class="pill">Check in, then keep the afternoon light</span>
+                <span class="pill">Dinner close to the stay</span>
+              </div>
+
+              <ul class="chapter-moments">
+                <li>Check into The Finch’s Arms and let the arrival evening stay easy.</li>
+                <li>Take a short wander through Hambleton or loop around Rutland Water.</li>
+                <li>If Oakham fits naturally, treat it as a bonus, not a target.</li>
+                <li>Keep dinner local so the trip starts with atmosphere instead of decision fatigue.</li>
+              </ul>
+
+              <div class="chapter-footer">
+                <p class="mini-copy">Mood: restorative, elegant, low-effort, quietly special.</p>
+                <a class="chapter-link" href="https://www.hitchensbarn.co.uk/" target="_blank" rel="noreferrer">
+                  See Thursday dinner option
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="chapter-card reveal" id="friday">
+            <div class="chapter-image">
+              <img
+                src="./media/lincoln-cathedral-1600.jpg"
+                alt="Lincoln Cathedral façade in warm light"
+                width="1200"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="chapter-image__overlay"></div>
+              <div class="chapter-image__caption">The day the trip opens up and feels grand.</div>
+            </div>
+            <div class="chapter-copy-wrap">
+              <div>
+                <div class="chapter-kicker">Chapter Two | Friday 3 April</div>
+                <h3>The proper heritage day.</h3>
+              </div>
+
+              <p class="chapter-copy">
+                Friday is where the trip earns its memory. Lincoln gives you the right sort of
+                scale: cathedral first, lunch in the historic quarter, castle in the afternoon,
+                and steep old streets that make the whole day feel cinematic without ever becoming sprawling.
+              </p>
+
+              <div class="chapter-facts">
+                <span class="pill">Breakfast in Hambleton</span>
+                <span class="pill">Cathedral in the morning</span>
+                <span class="pill">Castle and old quarter after lunch</span>
+              </div>
+
+              <ul class="chapter-moments">
+                <li>Start at Lincoln Cathedral while the day still feels fresh and anticipatory.</li>
+                <li>Pause for lunch in the Cathedral Quarter, ideally at The Bronze Pig.</li>
+                <li>Use the afternoon for Lincoln Castle and a slower wander through Steep Hill.</li>
+                <li>Return to Rutland rather than chasing a second dramatic evening.</li>
+              </ul>
+
+              <div class="chapter-footer">
+                <p class="mini-copy">Mood: stately, romantic, spendful in the right way, worth the whole Friday.</p>
+                <a class="chapter-link" href="https://lincolncastle.digitickets.co.uk/tickets" target="_blank" rel="noreferrer">
+                  Book the castle
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="chapter-card reveal" id="saturday">
+            <div class="chapter-image">
+              <img
+                src="./media/leamington-spa-1600.jpg"
+                alt="Royal Leamington Spa town centre with elegant period architecture"
+                width="1600"
+                height="1109"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="chapter-image__overlay"></div>
+              <div class="chapter-image__caption">The journey west becomes part of the pleasure.</div>
+            </div>
+            <div class="chapter-copy-wrap">
+              <div>
+                <div class="chapter-kicker">Chapter Three | Saturday 4 April</div>
+                <h3>Come back slowly.</h3>
+              </div>
+
+              <p class="chapter-copy">
+                This is not a comedown day. Check out after breakfast, head west, and let Royal
+                Leamington Spa interrupt the drive with something lighter: boutiques, familiar
+                shops, an easy lunch, and a little re-entry into ordinary life before you return to your parents.
+              </p>
+
+              <div class="chapter-facts">
+                <span class="pill">Checkout after breakfast</span>
+                <span class="pill">2 to 4 hours in Leamington</span>
+                <span class="pill">Late-afternoon return to family</span>
+              </div>
+
+              <ul class="chapter-moments">
+                <li>Use the stop as a proper pause, not just a service-station substitute.</li>
+                <li>Keep lunch informal so the day remains open and easy.</li>
+                <li>Let shopping be useful, pleasant, and unforced.</li>
+                <li>Arrive back with your parents before the day starts to feel fragmented.</li>
+              </ul>
+
+              <div class="chapter-footer">
+                <p class="mini-copy">Mood: graceful, useful, lighter in tone, exactly the right ending to the couple’s part of the trip.</p>
+                <a class="chapter-link" href="https://royal-leamington-spa.co.uk/shopping/" target="_blank" rel="noreferrer">
+                  Browse the shopping stop
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="split-panels">
+          <article class="stay-panel reveal">
+            <p class="eyebrow">Where to stay</p>
+            <h2>The base should feel like part of the story.</h2>
+            <p class="section-copy">
+              The Finch’s Arms remains the best overall choice because it makes Thursday effortless
+              and Friday easy. Hambleton Hall is the splurge if you want the hotel itself to become
+              one of the trip’s central memories.
+            </p>
+
+            <div class="stay-grid">
+              <div class="stay-card">
+                <h3>The Finch’s Arms</h3>
+                <p>Proper Hambleton setting, rooms on site, dinner downstairs, and the right balance between romance and restraint.</p>
+              </div>
+              <div class="stay-card">
+                <h3>Hambleton Hall</h3>
+                <p>The polished upgrade when Michelin-starred dining and a country-house mood are worth making part of the headline.</p>
+              </div>
+            </div>
+
+            <div class="stay-links" style="margin-top: 18px;">
+              <a href="https://www.finchsarms.co.uk/" target="_blank" rel="noreferrer">The Finch’s Arms</a>
+              <a href="https://www.hambletonhall.com/" target="_blank" rel="noreferrer">Hambleton Hall</a>
+            </div>
+          </article>
+
+          <article class="booking-panel reveal" id="book">
+            <p class="eyebrow">Book lightly, but in order</p>
+            <h2>Secure the shape before the details.</h2>
+            <ol class="booking-list">
+              <li>
+                <strong>1</strong>
+                <span>Lock in the two nights away first, because the stay decides the emotional tone of the whole trip.</span>
+              </li>
+              <li>
+                <strong>2</strong>
+                <span>Reserve the one meal you care about most, likely Friday lunch or Thursday dinner.</span>
+              </li>
+              <li>
+                <strong>3</strong>
+                <span>Book Lincoln tickets once the stay is confirmed, since Friday is the only tightly shaped sightseeing day.</span>
+              </li>
+              <li>
+                <strong>4</strong>
+                <span>Leave Leamington mostly open unless there is a specific lunch or shop you really want.</span>
+              </li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <article class="sources-panel reveal">
+          <p class="eyebrow">Useful links</p>
+          <h2>The practical layer, kept quiet at the end.</h2>
+          <div class="source-grid">
+            <div class="source-group">
+              <h3>Stay</h3>
+              <div class="source-links">
+                <a href="https://www.finchsarms.co.uk/" target="_blank" rel="noreferrer">The Finch’s Arms</a>
+                <a href="https://www.finchsarms.co.uk/menu" target="_blank" rel="noreferrer">The Finch’s Arms menu</a>
+                <a href="https://www.hambletonhall.com/" target="_blank" rel="noreferrer">Hambleton Hall</a>
+              </div>
+            </div>
+            <div class="source-group">
+              <h3>Dining</h3>
+              <div class="source-links">
+                <a href="https://www.hitchensbarn.co.uk/" target="_blank" rel="noreferrer">Hitchen’s Barn</a>
+                <a href="https://www.visitlincoln.com/listing/the-bronze-pig/95831101/" target="_blank" rel="noreferrer">The Bronze Pig</a>
+                <a href="https://guide.michelin.com/gb/en/rutland/oakham/restaurants" target="_blank" rel="noreferrer">Michelin Oakham guide</a>
+              </div>
+            </div>
+            <div class="source-group">
+              <h3>Lincoln</h3>
+              <div class="source-links">
+                <a href="https://lincolncathedral.com/visit/" target="_blank" rel="noreferrer">Cathedral visit</a>
+                <a href="https://lincolncathedral.com/times-and-tickets/" target="_blank" rel="noreferrer">Cathedral tickets</a>
+                <a href="https://lincolncastle.digitickets.co.uk/tickets" target="_blank" rel="noreferrer">Castle tickets</a>
+              </div>
+            </div>
+            <div class="source-group">
+              <h3>Leamington and Oakham</h3>
+              <div class="source-links">
+                <a href="https://royal-leamington-spa.co.uk/shopping/" target="_blank" rel="noreferrer">Leamington shopping</a>
+                <a href="https://leamingtonshoppingpark.co.uk/store-guide/" target="_blank" rel="noreferrer">Shopping Park</a>
+                <a href="https://www.oakhamcastle.org/" target="_blank" rel="noreferrer">Oakham Castle</a>
+              </div>
+            </div>
+          </div>
+          <div class="source-note" style="margin-top: 20px;">
+            <p>
+              Photography is stored locally in the <code>media/</code> folder for simple static deployment,
+              with attribution preserved below.
+            </p>
+            <div class="source-links" style="margin-top: 12px;">
+              <a href="https://commons.wikimedia.org/wiki/File:Rutland_Water_at_Normanton.jpg" target="_blank" rel="noreferrer">
+                Rutland Water at Normanton by NotFromUtrecht, CC BY-SA 3.0
+              </a>
+              <a href="https://commons.wikimedia.org/wiki/File:Lincoln_cathedral_01_westfront.jpg" target="_blank" rel="noreferrer">
+                Lincoln cathedral west front by TTaylor, CC BY 2.5
+              </a>
+              <a href="https://commons.wikimedia.org/wiki/File:The_Parade,_Leamington_Spa,_geograph_4333089_by_Fred_Howard.jpg" target="_blank" rel="noreferrer">
+                The Parade, Leamington Spa by Fred Howard, CC BY-SA 2.0
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
